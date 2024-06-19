@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #242222;
+}
+.list li{
+    list-style: none;
+    font-size:20px;
+    font-weight:900;
+    font-style: oblique;
+    color: #09ffd6;
+}
+.list li:hover{
+    transform: scale(0.9);
+}
+.list{
+    display: flex;
+    gap: 30px;
+    margin: 1s0px;
+    cursor: pointer;
+}
+header a{
+    margin: 20px;
+    font-size:30px;
+    font-weight: 900;
+    font-style: oblique;
+    color: aqua;
+}
+header a:hover{
+    transform: scale(0.9);
+}
+#darkmode{
+    font-size:24px;
+}
+#toggle,label{
+    display:none;
+    padding: 30px;
+}
+@media (max-width:756px){
+    .list{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items:center;
+    }
+    label{
+        display: block;
+    }
+    #toggle:checked~.list{
+        display: flex;
+    }
+}
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.heading{
+    margin-top: 10%;
+}
+.heading p{
+    padding-right:8%;
+    margin:5px;
+    font-size:16px;
+    font-style:oblique;
+    font-weight:600;
+}
+.heading .btn{
+    font-size: 25px;
+    font-weight:600;
+    border-radius: 20px;
+}
+.home img{
+  top:20%;
+  right:15%;
+}
+.img img:hover{
+    transform: scale(0.9);
+}
+.img img{
+    height:60%;
+    position:absolute;
+    overflow: hidden;
+}
+.home h1{
+    font-size:34px;
+    font-weight: 900;
+    font-style: oblique;
+}
+.home h1 span{
+    color: aqua;
+}
+.home h2{
+    font-size: 30px;
+    font-style: oblique;
+    font-weight: 800;
+}
+
+.home h2 span::after{
+    content: "front end developer";
+    color: aqua;
+    animation: words 4s infinite;
+}
+.heading a button{
+   font-size:250%;
+   margin: 25px;
+   border-radius:10px;
+   background: linear-gradient(to left,yellow,pink);
+   cursor: pointer;
+}
+.heading a button:hover{
+    transform:scale(0.9);
+    background: linear-gradient(to left,#ff6600,#7bff00);
+}
+@keyframes words {
+    0%,10%{
+        content: "youtuber";
+    }
+    12%,24%{
+        content: "web scraper";
+    }
+}
+footer{
+    margin-top:6%;
+    background: #242222;
+    flex-wrap: wrap;
+    width: auto;
+    height:40px;
+    overflow: hidden;
+}
+footer p{
+    text-align: center;
+    padding:10px;
+}
+@media (max-width:756px) {
+    .home{
+        display: block;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .home h1{
+        font-size: 28px;
+        font-weight: 900;
+    }
+    .img{
+        display: block
+    }
+    .heading a{
+        font-size: auto;
+    }
+    .img img{
+        top:auto;
+        height:45%;
+        width:auto;
+        margin: auto;
+    }
+    footer{
+        text-align: center;
+        padding:auto;
+        display:auto;
+        margin-top:100%;
+        position:sticky;
+    }
+}
+
+.about{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    margin-top:5%;
+}
+.about .heading1{
+    margin-top: 10px;
+    padding-left: 55px;
+}
+.about .heading1 h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: oblique;
+    color: #00ffff;
+}
+
+.about .heading1 p{
+    font-size: 20px;
+    font-weight:550;
+    font-style: oblique;
+}
+.about .logo img{
+    height:250px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius:90px;
+    background:linear-gradient(to left, rgb(255, 0, 0),#09ff09);
+}
+.about .logo img{
+    margin-left: 50px;
+}
+.about .logo img:hover{
+    transform: scale(0.9);
+    background:linear-gradient(to left,#ffee00,#f198ba);
+}
+.skills h1{
+    padding-left:-1%;
+    margin: 40px;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: oblique;
+    color: #09ffd6;
+}
+.skills{
+    width: 900px;
+    margin: 90px auto;
+    padding:5px;
+    list-style: none;
+    margin-left:16%;
+    box-shadow: 0 14px 28px #ff1212,0 10px 10px #ffbb00;
+}
+.skills li{
+    margin: 10px;
+    padding: 20px;
+}
+.bar{
+    border:4px solid;
+    display: block;
+    border-radius: 10px;
+}
+.bar span{
+    height: 18px;
+    float: left;
+    border-radius: 10px;
+    background: linear-gradient(to left,yellow,pink);
+}
+.html{
+    width: 90%;
+    animation: 3s html;
+}
+.css{
+    width: 60%;
+    animation: 3s css;
+}
+.javascript{
+    width: 48%;
+    animation: 3s javascript;
+}
+.bootstrap{
+    width: 70%;
+    animation: 3s bootstrap;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    90%{
+        width: 90%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    60%{
+        width: 60%;
+    }
+}
+@keyframes javascript {
+    0%{
+        width: 0%;
+    }
+    48%{
+        width: 48%;
+    }
+}
+@keyframes bootstrap {
+    0%{
+        width: 0%;
+    }
+    70%{
+        width: 70%;
+    }
+
+}
+@media (max-width:756px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .skills{
+        width:100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .bar{
+        width: 100%;
+        margin: 10;
+        overflow: hidden;
+    }
+    .achievements{
+        display: block;
+        flex-direction: column;
+        width: auto;
+        margin-top:30%;
+        overflow: hidden;
+    }
+    .strenghts{
+        display: block;
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+        margin-top:30%;
+        overflow: hidden;
+    }
+}
+.achievements{
+    display:block;
+    margin-left: 13%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.achievements h1{
+    font-size: 40px;
+    color:aqua;
+    font-weight: 900;
+    font-style: oblique;
+    margin:26px;
+}
+.achievements ul li{
+    list-style:none;
+    font-size: 20px;
+    margin: 20px;
+    font-style: oblique;
+    font-weight: 800;
+}
+.strenghts{
+    display:block;
+    margin-left: 13%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.strenghts h1{
+    font-size: 40px;
+    color:aqua;
+    font-weight: 900;
+    font-style: oblique;
+    margin:26px;
+}
+.strenghts ul li{
+    list-style:none;
+    font-size: 20px;
+    margin: 20px;
+    font-style: oblique;
+    font-weight: 800;
+}
+.project1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 70px;
+}
+.project h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: #09ffd6;
+    font-style: oblique;
+    margin: 20px;
+}
+.project p{
+    font-size: 20px;
+    margin-top: 50px;
+    font-style: italic;
+}
+.projectimg a img{
+    height: 350px;
+    border-radius:50px;
+    padding:10px;
+    background: linear-gradient(to left,green,yellow);
+}
+.projectimg a img:hover{
+    transform: scale(0.9);
+    background: linear-gradient(to left,red,blue);
+}
+@media (max-width:576px) {
+    .project{
+        display: block;
+        flex-direction: column;
+        width:100%;
+        margin:auto;
+        overflow: hidden;
+    }
+    .project h1 p{
+        width: 100%;
+        margin: autos;
+    }
+    .projectimg a img{
+        height:200px;
+        overflow: hidden;
+    }
+}
+.contact{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-top:6%;
+    margin-left:28%;
+    padding:10px;
+    width: 600px;
+    box-shadow: 0 14px 28px #ff1212,0 10px 10px #00ff0d;
+    border-radius: 30px;
+}
+.contact:hover{
+    transform: scale(0.9);
+    box-shadow: 0 14px 28px yellow,0 10px 10px black;
+}
+.contact h1{
+    font-size: 40px;
+    font-weight: 900;
+    font-style: oblique;
+    color:#00ffff;
+    margin: 30px;
+}
+.contact p{
+    font-size: 20px;
+    font-weight: 800;
+    font-style: oblique;
+    margin: 30px;
+}
+.contact form input{
+    font-size:14px;
+    height: 30px;
+    width: 60%;
+    border-radius: 10px;
+}
+.contact form textarea{
+    /* font-size:22px; */
+    height: 30px;
+    width: 60%;
+    border-radius: 10px;
+}
+.btn1{
+    font-size: 30px;
+    cursor: pointer;
+    border-radius:10px;
+    background: linear-gradient(to left,rgb(0, 255, 0),rgb(255, 230, 0));
+}
+.btn1:hover{
+    transform: scale(0.9);
+    background: linear-gradient(to left,rgb(0, 162, 255),rgb(255, 0, 106));
+}
+@media (max-width:756px) {
+    .contact{
+        display: block;
+        height:auto;
+        margin:40px;
+        width:auto;
+    }
+    /* .contact form{
+        margin-top: 40%;
+    } */
+    .contact form input{
+        height:50px;
+        width:80%;
+    }
+    .contact form textarea{
+        height: 50px;
+        width: 80%;
+    }
+
+}
